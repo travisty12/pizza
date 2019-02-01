@@ -8,7 +8,7 @@ function Order() {
 
 Order.prototype.addPizza = function(pizza) {
   pizza.id = this.assignId();
-  this.pizzas.push(pizza);
+  this.pizzas.unshift(pizza);
 }
 
 Order.prototype.assignId = function() {
@@ -28,6 +28,16 @@ Order.prototype.deletePizza = function(id) {
   return false;
 }
 
+Order.prototype.findCost = function() {
+  for (var i = 0; i < this.pizzas.length; i++) {
+    if (this.pizzas[i]) {
+      this.cost += this.pizzas[i].findCost();
+    }
+  }
+  return this.cost;
+}
+
+
 function Pizza() {
   this.size = 0;
   this.toppings = [];
@@ -42,9 +52,25 @@ Pizza.prototype.topIn = function(toppings) {
   this.toppings.push(toppings);
 }
 
+Pizza.prototype.findCost = function() {
+  this.price = this.size * 10 + this.toppings.length * 3;
+  return this.price;
+}
+
 var order = new Order();
 
 var pizza;
+var pizzaList = "";
+
+function sizeToString(size) {
+  if (size == 1) {
+    return "Personal";
+  } else if (size == 2) {
+    return "Medium";
+  } else if (size == 3) {
+    return "Family-sized";
+  }
+}
 
 $(document).ready(function() {
 
@@ -57,6 +83,13 @@ $(document).ready(function() {
 
   $("#infoBtn").click(function() {
     order.name = $("#nameIn").val();
+    order.number = $("#number").val();
+    if (order.name == "") {
+      order.name = "buddy";
+    }
+    if (order.number == "") {
+      order.number = "a payphone nearby. We know where you live already, and see all.";
+    }
     $("#infoDiv").fadeOut();
     setTimeout(function() {
       $("#sizeDiv").fadeIn();
@@ -77,12 +110,49 @@ $(document).ready(function() {
       var topping = $(this).val();
       pizza.topIn(topping);
     });
-    alert(pizza.toppings);
+    order.addPizza(pizza);
     $("#topDiv").fadeOut();
+    $(".nameSpot").text(order.name);
+    setTimeout(function() {
+      $("#cartDiv").fadeIn();
+    }, 400);
+
+    pizzaList += "<li>- " + sizeToString(order.pizzas[0].size) + " pizza with ";
+    for (var j = 0; j < order.pizzas[0].toppings.length; j++) {
+      if (j != order.pizzas[0].toppings.length - 1) {
+        pizzaList += order.pizzas[0].toppings[j] + ", ";
+      } else {
+        pizzaList += " and " + order.pizzas[0].toppings[j];
+      }
+    }
+    pizzaList += ": $" + order.pizzas[0].findCost() + "</li>";
+    $(".pizzaList").append(pizzaList);
+
+  });
+
+  $("#newBtn").click(function() {
+    $("#cartDiv").fadeOut();
+    setTimeout(function() {
+      $("#sizeDiv").fadeIn();
+    });
+    $('input[type=checkbox]').each(function() {
+            this.checked = false;
+    });
+    pizzaList = "";
+
+  });
+
+  $("#done").click(function() {
     $("#cartPending").fadeOut();
+
+
+    $("#cartResult").append("<p>Your total is $" + order.findCost() + "</p>");
+    $("#cartResult").append("<p>We'll call you in a couple hours with everything, at " + order.number + "</p>");
+
     setTimeout(function() {
       $("#cartResult").fadeIn();
-    }, 400);
+    });
+
   });
 
 

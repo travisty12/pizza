@@ -9,12 +9,12 @@
     <script src="js/scripts.js"></script>
     <title>Uncle T's Endlessly-Deep Dish Pizzeria</title>
   </head>
-  <body class="teal lighten-3">
+  <body class="blue lighten-4">
     <main>
       <div class="container">
         <div class="row">
           <div class="col s3"></div>
-          <div class="col l6 s6 card-panel teal lighten-2 z-depth-1">
+          <div class="col l6 card-panel teal lighten-2 z-depth-1">
             <h2 class="white-text center-align">Uncle T's Endlessly-Deep Dish Pizzeria</h2>
           </div>
         </div>
@@ -148,10 +148,22 @@
         </div>
         <div class="row" id="cartDiv">
           <div class="col s12 card-panel teal lighten-2 z-depth-1" id="cartPending">
-            <p>Your order so far:</p>
+            <p>Okay, <span class="nameSpot"></span>. Your order so far:</p>
+            <ul class="pizzaList">
+
+            </ul>
+            <div class="row center-align">
+              <a id="newBtn" class="waves-effect waves-light btn">another</a>
+            </div>
+            <div class="row center-align">
+              <a id="done" class="waves-effect waves-light btn">order</a>
+            </div>
           </div>
           <div class="col s12 card-panel teal lighten-2 z-depth-1" id="cartResult">
-            <p>Here's what I've got for you:</p>
+            <p>Okay, <span class="nameSpot"></span>. Here's what I've got for you:</p>
+            <ul class="pizzaList">
+
+            </ul>
           </div>
         </div>
       </div>
