@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Uncle Trav's Pizza</title>
   </head>
-  <body>
+  <body class="deep-purple lighten-3">
+    <div class="container">
+      <div class="row">
+        <div class="card-panel indigo lighten-3 z-depth-5">
+          <h2 class="valign-center center-align">Uncle Trav's Pizza</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card-panel teal lighten-3 left z-depth-3">
+          <p>Please choose the size of pizza you would like:</p>
+        </div>
+        <div class="card-panel teal lighten-4 right z-depth-3">
+          <form>
+            <input type="radio" name="size" value="1">Small<br>
+            <input type="radio" name="size" value="2">Medium<br>
+            <input type="radio" name="size" value="3">Large<br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
