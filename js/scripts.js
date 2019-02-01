@@ -74,7 +74,7 @@ function sizeToString(size) {
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.fixed-action-btn');
-  var instances = M.FloatingActionButton.init(elems, options);
+  var instances = M.FloatingActionButton.init(elems);
 });
 
 $(document).ready(function() {
@@ -90,11 +90,9 @@ $(document).ready(function() {
   $("#infoBtn").click(function() {
     order.name = $("#nameIn").val();
     order.number = $("#number").val();
-    console.log(order.number);
     if (order.name == "") {
       order.name = "buddy";
     }
-    console.log(order.number);
     if (order.number == "") {
       order.number = "a payphone nearby. We know where you live already, and see all.";
     }
@@ -125,15 +123,21 @@ $(document).ready(function() {
       $("#cartDiv").fadeIn();
     }, 400);
 
-    pizzaList += "<li>- " + sizeToString(order.pizzas[0].size) + " pizza with ";
-    for (var j = 0; j < order.pizzas[0].toppings.length; j++) {
-      if (j != order.pizzas[0].toppings.length - 1) {
-        pizzaList += order.pizzas[0].toppings[j] + ", ";
-      } else {
-        pizzaList += " and " + order.pizzas[0].toppings[j];
+    if (order.pizzas[0].toppings.length == 0) {
+      pizzaList += "<li>- " + sizeToString(order.pizzas[0].size) + " pizza: $" + order.pizzas[0].findCost() + "</li>";
+    } else {
+      pizzaList += "<li>- " + sizeToString(order.pizzas[0].size) + " pizza with ";
+      for (var j = 0; j < order.pizzas[0].toppings.length; j++) {
+        if (j != order.pizzas[0].toppings.length - 1) {
+          pizzaList += order.pizzas[0].toppings[j] + ", ";
+        } else if (j > 0) {
+          pizzaList += " and " + order.pizzas[0].toppings[j];
+        } else {
+          pizzaList += " " + order.pizzas[0].toppings[j];
+        }
       }
+      pizzaList += ": $" + order.pizzas[0].findCost() + "</li>";
     }
-    pizzaList += ": $" + order.pizzas[0].findCost() + "</li>";
     $(".pizzaList").append(pizzaList);
 
   });

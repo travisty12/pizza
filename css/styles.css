@@ -14,3 +14,15 @@ body {
 #homeDiv:hover {
   cursor: pointer;
 }
+
+#infoDiv {
+  margin-bottom: 40px;
+}
+
+#sizeDiv {
+  margin-bottom: 140px;
+}
+
+#cartDiv {
+  margin-bottom: 170px;
+}
