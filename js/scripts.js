@@ -6,3 +6,8 @@ function Pizza(size, toppings) {
 Pizza.prototype.cost = function() {
 
 }
+
+
+$(document).ready(function() {
+
+});

@@ -16,16 +16,82 @@
           <h2 class="valign-center center-align">Uncle Trav's Pizza</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="card-panel teal lighten-3 left z-depth-3">
+      <div id="infoInput" class="card-panel indigo lighten-4 z-depth-3 row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="number" type="number" class="validate">
+              <label for="number">Phone Number</label>
+            </div>
+          </div>
+          <div class="row">
+            <a class="waves-effect waves-light btn">submit</a>
+          </div>
+        </form>
+      </div>
+      <div class="row" id="sizeDiv">
+        <div class="col s5 card-panel teal lighten-2 left z-depth-3">
           <p>Please choose the size of pizza you would like:</p>
         </div>
-        <div class="card-panel teal lighten-4 right z-depth-3">
-          <form>
-            <input type="radio" name="size" value="1">Small<br>
-            <input type="radio" name="size" value="2">Medium<br>
-            <input type="radio" name="size" value="3">Large<br>
-            <input type="submit" value="Submit">
+        <div class="col s6 card-panel teal lighten-4 right z-depth-3">
+          <form action="#">
+            <p>
+              <label>
+                <input name="size" type="radio" checked />
+                <span>Small</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="size" type="radio" />
+                <span>Medium</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" name="size" type="radio"  />
+                <span>Large</span>
+              </label>
+            </p>
+            <a class="waves-effect waves-light btn">submit</a>
+          </form>
+        </div>
+      </div>
+      <div class="row" id="topDiv">
+        <div class="col s5 card-panel teal lighten-2 left z-depth-3">
+          <p>Please choose the toppings you would like:</p>
+        </div>
+        <div class="col s6 card-panel teal lighten-4 right z-depth-3">
+          <form action="#">
+            <p>
+              <label>
+                <input name="size" type="radio" checked />
+                <span>Meat</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="size" type="radio" />
+                <span>Veggies</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" name="size" type="radio"  />
+                <span>Other</span>
+              </label>
+            </p>
+            <a class="waves-effect waves-light btn">submit</a>
           </form>
         </div>
       </div>
