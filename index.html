@@ -9,92 +9,132 @@
     <script src="js/scripts.js"></script>
     <title>Uncle Trav's Pizza</title>
   </head>
-  <body class="deep-purple lighten-3">
-    <div class="container">
-      <div class="row">
-        <div class="card-panel indigo lighten-3 z-depth-5">
-          <h2 class="valign-center center-align">Uncle Trav's Pizza</h2>
-        </div>
-      </div>
-      <div id="infoInput" class="card-panel indigo lighten-4 z-depth-3 row">
-        <form class="col s12">
+  <body class="teal lighten-3">
+      <header>
+        <div class="container">
           <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
+            <div class="card-panel indigo lighten-3 z-depth-4">
+              <h2 class="valign-center center-align">Uncle Trav's Pizza</h2>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="number" type="number" class="validate">
-              <label for="number">Phone Number</label>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <div id="infoDiv" class="card-panel indigo lighten-5 z-depth-3 row hoverable">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" type="text" class="validate">
+                  <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="number" type="number" class="validate">
+                  <label for="number">Phone Number</label>
+                </div>
+              </div>
+              <div class="row center-align">
+                <a id="infoBtn" class="waves-effect waves-light btn">submit</a>
+              </div>
+            </form>
+          </div>
+          <div class="row" id="sizeDiv">
+            <div class="col s5 card-panel teal lighten-2 left z-depth-3">
+              <p>Please choose the size of pizza you would like:</p>
+            </div>
+            <div class="col s6 card-panel teal lighten-4 right z-depth-3 hoverable">
+              <form action="#">
+                <p>
+                  <label>
+                    <input name="size" type="radio" checked />
+                    <span>Small</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="size" type="radio" />
+                    <span>Medium</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" name="size" type="radio"  />
+                    <span>Large</span>
+                  </label>
+                </p>
+                <div class="row center-align">
+                  <a id="sizeBtn" class="waves-effect waves-light btn">submit</a>
+                </div>
+              </form>
             </div>
           </div>
-          <div class="row">
-            <a class="waves-effect waves-light btn">submit</a>
+          <div class="row" id="topDiv">
+            <div class="col s5 card-panel teal lighten-2 left z-depth-3 hoverable">
+              <p>Please choose the toppings you would like:</p>
+            </div>
+            <div class="col s6 card-panel teal lighten-4 right z-depth-3">
+              <form action="#">
+                <p>
+                  <label>
+                    <input name="top" type="checkbox"  />
+                    <span>Cheese</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="top" type="checkbox" />
+                    <span>Veggies</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="top" type="checkbox"  />
+                    <span>Other</span>
+                  </label>
+                </p>
+                <div class="row center-align">
+                  <a id="topBtn" class="waves-effect waves-light btn">submit</a>
+                </div>
+              </form>
+            </div>
           </div>
-        </form>
-      </div>
-      <div class="row" id="sizeDiv">
-        <div class="col s5 card-panel teal lighten-2 left z-depth-3">
-          <p>Please choose the size of pizza you would like:</p>
+          <div class="row" id="cartDiv">
+            <div class="col s10 card-panel teal lighten-2 z-depth-3">
+              <p>Here's what I've got for you:</p>
+            </div>
+          </div>
         </div>
-        <div class="col s6 card-panel teal lighten-4 right z-depth-3">
-          <form action="#">
-            <p>
-              <label>
-                <input name="size" type="radio" checked />
-                <span>Small</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="size" type="radio" />
-                <span>Medium</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input class="with-gap" name="size" type="radio"  />
-                <span>Large</span>
-              </label>
-            </p>
-            <a class="waves-effect waves-light btn">submit</a>
-          </form>
+      </main>
+      <footer class="page-footer indigo lighten-3">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">About the Creator</h5>
+              <p class="grey-text text-lighten-4">Uncle Trav is a good guy, hire him to make sites for you.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Contact/More</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Portfolio</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">GitHub</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Email</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Discord</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="row" id="topDiv">
-        <div class="col s5 card-panel teal lighten-2 left z-depth-3">
-          <p>Please choose the toppings you would like:</p>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2019 Travis Toal
+          </div>
         </div>
-        <div class="col s6 card-panel teal lighten-4 right z-depth-3">
-          <form action="#">
-            <p>
-              <label>
-                <input name="size" type="radio" checked />
-                <span>Meat</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="size" type="radio" />
-                <span>Veggies</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input class="with-gap" name="size" type="radio"  />
-                <span>Other</span>
-              </label>
-            </p>
-            <a class="waves-effect waves-light btn">submit</a>
-          </form>
-        </div>
-      </div>
+      </footer>
     </div>
 
   </body>
