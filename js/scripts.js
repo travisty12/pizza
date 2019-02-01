@@ -84,9 +84,11 @@ $(document).ready(function() {
   $("#infoBtn").click(function() {
     order.name = $("#nameIn").val();
     order.number = $("#number").val();
+    console.log(order.number);
     if (order.name == "") {
       order.name = "buddy";
     }
+    console.log(order.number);
     if (order.number == "") {
       order.number = "a payphone nearby. We know where you live already, and see all.";
     }
@@ -155,7 +157,9 @@ $(document).ready(function() {
 
   });
 
-
+  $("#homeDiv").click(function() {
+    location.reload();
+  });
 
 
 

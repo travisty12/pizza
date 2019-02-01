@@ -9,3 +9,7 @@ body {
 #infoDiv, #sizeDiv, #topDiv, #cartDiv, #cartResult {
   display: none;
 }
+
+#homeDiv:hover {
+  cursor: pointer;
+}
