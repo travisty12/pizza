@@ -7,135 +7,144 @@
     <script src="js/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Uncle Trav's Pizza</title>
+    <title>Uncle T's Endlessly-Deep Dish Pizzeria</title>
   </head>
   <body class="teal lighten-3">
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="card-panel indigo lighten-3 z-depth-4">
-              <h2 class="valign-center center-align">Uncle Trav's Pizza</h2>
-            </div>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col s3"></div>
+          <div class="col l6 s6 card-panel teal lighten-2 z-depth-1">
+            <h2 class="white-text center-align">Uncle T's Endlessly-Deep Dish Pizzeria</h2>
           </div>
         </div>
-      </header>
-      <main>
-        <div class="container">
-          <div id="infoDiv" class="card-panel indigo lighten-5 z-depth-3 row hoverable">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                  <input id="first_name" type="text" class="validate">
-                  <label for="first_name">First Name</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="last_name" type="text" class="validate">
-                  <label for="last_name">Last Name</label>
-                </div>
+        <div id="disclaimerDiv" class="card-panel indigo lighten-4 z-depth-2 row">
+          <div class="row center-align">
+            <h1>DISCLAIMER</h1>
+            <p>Uncle T's Endlessly-Deep Dish Pizzeria is NOT responsible for any items, effects, or persons lost within a dish. All customers, by purchasing one of Uncle T's Endlessly-Deep Dish Pizzas, acknowledges and accepts the risks of breaching into the Pizza Dimension. Under NO circumstances should an Endlessly-Deep Dish be overturned, and any customers found to be overturning an Endlessly-Deep Dish shall be fined, prosecuted, and found responsible for the resulting boundless void of pizza.</p>
+          </div>
+          <div class="row center-align">
+            <a id="disclaimer" class="waves-effect waves-light btn">accept</a>
+          </div>
+        </div>
+        <div id="infoDiv" class="card-panel indigo lighten-5 z-depth-1 row hoverable">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="nameIn" type="text" class="validate">
+                <label for="nameIn">First Name</label>
               </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="number" type="number" class="validate">
-                  <label for="number">Phone Number</label>
-                </div>
+              <div class="input-field col s6">
+                <input id="dino" type="text" class="validate">
+                <label for="dino">Favorite Dinosaur</label>
               </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="number" type="number" class="validate">
+                <label for="number">Phone Number</label>
+              </div>
+            </div>
+            <div class="row center-align">
+              <a id="infoBtn" class="waves-effect waves-light btn">submit</a>
+            </div>
+          </form>
+        </div>
+        <div class="row" id="sizeDiv">
+          <div class="col s5 card-panel teal lighten-2 left z-depth-1">
+            <p>Please choose the size of pizza you would like:</p>
+          </div>
+          <div class="col s6 card-panel teal lighten-4 right z-depth-1 hoverable">
+            <form action="#">
+              <p>
+                <label>
+                  <input name="size" type="radio" value="1" checked />
+                  <span>Personal</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="size" type="radio" value="2" />
+                  <span>Medium</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="size" type="radio" value="3" />
+                  <span>Family Size</span>
+                </label>
+              </p>
               <div class="row center-align">
-                <a id="infoBtn" class="waves-effect waves-light btn">submit</a>
+                <a id="sizeBtn" class="waves-effect waves-light btn">submit</a>
               </div>
             </form>
           </div>
-          <div class="row" id="sizeDiv">
-            <div class="col s5 card-panel teal lighten-2 left z-depth-3">
-              <p>Please choose the size of pizza you would like:</p>
-            </div>
-            <div class="col s6 card-panel teal lighten-4 right z-depth-3 hoverable">
-              <form action="#">
-                <p>
-                  <label>
-                    <input name="size" type="radio" checked />
-                    <span>Small</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input name="size" type="radio" />
-                    <span>Medium</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" name="size" type="radio"  />
-                    <span>Large</span>
-                  </label>
-                </p>
-                <div class="row center-align">
-                  <a id="sizeBtn" class="waves-effect waves-light btn">submit</a>
-                </div>
-              </form>
-            </div>
+        </div>
+        <div class="row" id="topDiv">
+          <div class="col s5 card-panel teal lighten-2 left z-depth-1 hoverable">
+            <p>Please choose the toppings you would like:</p>
           </div>
-          <div class="row" id="topDiv">
-            <div class="col s5 card-panel teal lighten-2 left z-depth-3 hoverable">
-              <p>Please choose the toppings you would like:</p>
-            </div>
-            <div class="col s6 card-panel teal lighten-4 right z-depth-3">
-              <form action="#">
-                <p>
-                  <label>
-                    <input name="top" type="checkbox"  />
-                    <span>Cheese</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input name="top" type="checkbox" />
-                    <span>Veggies</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input name="top" type="checkbox"  />
-                    <span>Other</span>
-                  </label>
-                </p>
-                <div class="row center-align">
-                  <a id="topBtn" class="waves-effect waves-light btn">submit</a>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="row" id="cartDiv">
-            <div class="col s10 card-panel teal lighten-2 z-depth-3">
-              <p>Here's what I've got for you:</p>
-            </div>
+          <div class="col s6 card-panel teal lighten-4 right z-depth-1 hoverable">
+            <form action="#">
+              <p>
+                <label>
+                  <input name="top" type="checkbox"  />
+                  <span>Cheese</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="top" type="checkbox" />
+                  <span>Veggies</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="top" type="checkbox"  />
+                  <span>Other</span>
+                </label>
+              </p>
+              <div class="row center-align">
+                <a id="topBtn" class="waves-effect waves-light btn">submit</a>
+              </div>
+            </form>
           </div>
         </div>
-      </main>
-      <footer class="page-footer indigo lighten-3">
+        <div class="row" id="cartDiv">
+          <div class="col s12 card-panel teal lighten-2 z-depth-1" id="cartPending">
+            <p>Your order so far:</p>
+          </div>
+          <div class="col s12 card-panel teal lighten-2 z-depth-1" id="cartResult">
+            <p>Here's what I've got for you:</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer indigo lighten-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">About the Creator</h5>
+            <p class="grey-text text-lighten-4">Uncle T is a good guy, hire him to make sites for you.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Contact/More</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Portfolio</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">GitHub</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Email</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Discord</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
         <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">About the Creator</h5>
-              <p class="grey-text text-lighten-4">Uncle Trav is a good guy, hire him to make sites for you.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Contact/More</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Portfolio</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">GitHub</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Email</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Discord</a></li>
-              </ul>
-            </div>
-          </div>
+        © 2019 Travis Toal
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-          © 2019 Travis Toal
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
+
 
   </body>
 </html>
