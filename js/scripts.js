@@ -39,11 +39,12 @@ Pizza.prototype.sizeIn = function(size) {
 }
 
 Pizza.prototype.topIn = function(toppings) {
-  this.toppings = toppings;
+  this.toppings.push(toppings);
 }
 
 var order = new Order();
 
+var pizza;
 
 $(document).ready(function() {
 
@@ -63,6 +64,8 @@ $(document).ready(function() {
   });
 
   $("#sizeBtn").click(function() {
+    pizza = new Pizza();
+    pizza.sizeIn($("input:radio[name=size]:checked").val());
     $("#sizeDiv").fadeOut();
     setTimeout(function() {
       $("#topDiv").fadeIn();
@@ -70,12 +73,19 @@ $(document).ready(function() {
   });
 
   $("#topBtn").click(function() {
+    $("input:checkbox[name=top]:checked").each(function(){
+      var topping = $(this).val();
+      pizza.topIn(topping);
+    });
+    alert(pizza.toppings);
     $("#topDiv").fadeOut();
     $("#cartPending").fadeOut();
     setTimeout(function() {
       $("#cartResult").fadeIn();
     }, 400);
   });
+
+
 
 
 
