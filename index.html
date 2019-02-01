@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -168,21 +169,41 @@
         </div>
       </div>
     </main>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">add</i>
+      </a>
+      <ul>
+        <li><a id="port" class="btn-floating red" href="https://travisty12.github.io/portfolio/"><i class="material-icons">account_circle</i></a></li>
+        <li><a id="git" class="btn-floating yellow darken-1" href="https://www.github.com/travisty12/"><i class="material-icons">business_center</i></a></li>
+        <li><a id="email" class="btn btn-floating green modal-trigger" href="#modal1"><i class="material-icons">call</i></a></li>
+        <li><a id="disc" class="btn btn-floating blue modal-trigger" href="#modal2"><i class="material-icons">chat</i></a></li>
+      </ul>
+      <div id="modal1" class="modal">
+        <div class="modal-content center-align">
+          <h4>Send me mail</h4>
+          <p>travisty12@gmail.com</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+      <div id="modal2" class="modal">
+        <div class="modal-content center-align">
+          <h4>Catch me on Discord</h4>
+          <p>Travisty#8922</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+    </div>
     <footer class="page-footer indigo lighten-3">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
             <h5 class="white-text">About the Creator</h5>
             <p class="grey-text text-lighten-4">Uncle T is a good guy, hire him to make sites for you.</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Contact/More</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="https://travisty12.github.io/portfolio/">Portfolio</a></li>
-              <li><a class="grey-text text-lighten-3" href="https://www.github.com/travisty12/">GitHub</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Email</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Discord</a></li>
-            </ul>
           </div>
         </div>
       </div>
