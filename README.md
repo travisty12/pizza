@@ -1,6 +1,6 @@
 # _Uncle T's Endlessly-Deep Dish Pizzeria_
 
-#### _The pizza is boundless, the object constructors/prototypes are not _
+#### _The pizza is boundless, the object constructors/prototypes are not_
 
 #### By _**Travis Toal**_
 
@@ -12,7 +12,7 @@
 
 * _You won't have that problem with *this* pizza site_
 
-_This site demonstrates constructing objects and creating methods with object prototypes._
+_This site demonstrates constructing objects and creating methods with object prototypes. Mostly just silly fun, with some neat modals and experimentation with MaterializeCSS._
 
 ## Specs
 
